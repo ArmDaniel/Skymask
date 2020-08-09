@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# Skymask
 
-You can use the [editor on GitHub](https://github.com/Motanovici/Skymask/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Description
 
-### Markdown
+Skymask is an application you can use to generate a temporary email address and manage the content.
+Moreover, it allows you to upload (or retrieve) any files or messages to a decentralized storage platform called Skynet ( powered by Sia ).
+This is easily performed and the user is handed a link to use on the [skynet site](https://siasky.net).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Motivation
 
-```markdown
-Syntax highlighted code block
+Considering today's information overload and lack of management, I found it extremely useful to be able to filter the noise.  
+As such, an application like Skymask allows you to handle all the information in a clean way, while also avoiding spam.  
 
-# Header 1
-## Header 2
-### Header 3
+Not only this, but it is privacy preserving as well, since the email is temporary and is destroyed ( along with the content ) after a period of time.  
+Add to this the use of Skynet as a storage means and it allows you to still keep anything you want in a safe and decentralized way.
 
-- Bulleted
-- List
+Therefore, the main advantages of using it are:
+* Privacy
+* Filters online noise and spam
+* Reduces information overload
+* Decentralized storage ensures a safe and transparent management of content
 
-1. Numbered
-2. List
+## Further development
 
-**Bold** and _Italic_ and `Code` text
+I seek to integrate a mail sending feature as well, with the added capability to GPG encrypt the messages.  
+Using a Natural Language analysis API that tells the user a short description of the overall mail sentiment and present entities is also in my TODO list.  
+Moreover, I aim at polishing the user interface for a smoother experience.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Motanovici/Skymask/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#### This application is made with <3 for the 'Own the Internet' hackathon on Gitcoin! -For Sia and Namebase
