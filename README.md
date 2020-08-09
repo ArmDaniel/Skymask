@@ -9,7 +9,7 @@ This is easily performed and the user is handed a link to use on the [skynet sit
 
 ## Motivation
 
-Considering today's information overload and lack of managemennt, I found it extremely useful to be able to filter the noise.  
+Considering today's information overload and lack of management, I found it extremely useful to be able to filter the noise.  
 As such, an application like Skymask allows you to handle all the information in a clean way, while also avoiding spam.  
 
 Not only this, but it is privacy preserving as well, since the email is temporary and is destroyed ( along with the content ) after a period of time.  
