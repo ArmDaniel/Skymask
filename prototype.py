@@ -1,9 +1,20 @@
 import requests
 from siaskynet import Skynet
+import random
+import string
 
-# build quick GUI
-# parse json results and offer clean output
-# add skynet functionalities ( upload, download ) [X]
+##########################################
+#										 #
+#            TEMPORARY EMAIL             #
+#                                        #
+##########################################
+
+def generate_alias(length):
+    letters = string.ascii_lowercase
+	alias_domain = ["@1secmail.org","@1secmail.com"]
+    alias_name = ''.join(random.choice(letters) for i in range(length))
+	alias = alias_name + random.choice(alias_domain)
+    return alias
 
 def check_mail(name,domain):
     mailbox = requests.get("https://www.1secmail.com/api/v1/?action=getMessages&login="+name+"&domain="+domain)
@@ -20,16 +31,18 @@ def download_file(name,domain,mid,filen):
     attach_json = attach.json()
     return attach_json
 
+##########################################
+#                                        #
+#        SYKNET FUNCTIONALITIES          #  
+#                                        #
+##########################################
 
-# allow easy upload via selection
-# for any messages to be uploaded, save msg to file and upload file to skylink
+def upload_f(path):
+	skylink = Skynet.upload_file(path)
+	return skylink
 
-#upload
-skylink = Skynet.upload_file("path")
-print(skylink)
-
-#download
 def sky_download(filen,skylink):
+	skylink = upload_f(filen)
 	try:
 		Skynet.download_file(filen,skylink)
 		print("Downloaded!")
