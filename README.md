@@ -1,6 +1,6 @@
 # Skymask
 
-----
+
 ## Description
 
 Skymask is an application you can use to generate a temporary email address and manage the content.
