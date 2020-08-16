@@ -2,19 +2,32 @@ import requests
 from siaskynet import Skynet
 import random
 import string
+import json
+import time
 
 ##########################################
-#										 #
+#			                 #
 #            TEMPORARY EMAIL             #
 #                                        #
 ##########################################
 
+alias_list = []
+
+
 def generate_alias(length):
     letters = string.ascii_lowercase
-	alias_domain = ["@1secmail.org","@1secmail.com"]
+    alias_domain = ["1secmail.org","1secmail.com"]
     alias_name = ''.join(random.choice(letters) for i in range(length))
-	alias = alias_name + random.choice(alias_domain)
+    alias = alias_name + '@' + random.choice(alias_domain)
+    
+    new = alias.split('@')
+    alias_tuple = (new[0],new[1])
+    alias_list.append(alias_tuple)
+    
     return alias
+
+def alias_manage():
+    return alias_list
 
 def check_mail(name,domain):
     mailbox = requests.get("https://www.1secmail.com/api/v1/?action=getMessages&login="+name+"&domain="+domain)
@@ -27,9 +40,17 @@ def fetch_msg(name,domain,mid):
     return msg_json
 
 def download_file(name,domain,mid,filen):
-    attach = requests.get("https://www.1secmail.com/api/v1/?action=download&login="+name+"&domain="+domain+"&id="+mid+"&file="+filen)
-    attach_json = attach.json()
-    return attach_json
+    try:
+        attach = requests.get("https://www.1secmail.com/api/v1/?action=download&login="+name+"&domain="+domain+"&id="+mid+"&file="+filen)
+        times = time.strftime("%Y%m%d-%H%M%S")
+        
+        f = open(times+'.txt','x')
+        with open('C:/Programming/Skymask/'+f, 'wb') as file:
+            file.write(attach.content)
+        return "Downloaded file!"
+    except:
+        return "No such file or server is down :("
+    
 
 ##########################################
 #                                        #
