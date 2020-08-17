@@ -1,8 +1,8 @@
 # Skymask
 
 Link to demo:
-* Youtube: [Skymask](https://youtu.be/QeifhNZ95_U)
 * Skylink: [Skymask on Skynet!](https://siasky.net/AABkmA-oiWNCpiZAcHIVPhPfYh2pJj5titWTK4BejXlwvw)
+* Youtube: [Skymask](https://youtu.be/QeifhNZ95_U)
 
 ## Description
 
@@ -22,13 +22,21 @@ Therefore, the main advantages of using it are:
 * Privacy
 * Filters online noise and spam
 * Reduces information overload
-* Decentralized storage ensures a safe and transparent management of content
+* Decentralized storage using Skynet ensures a **safe** and *transparent* management of content.
 
 ## Further development
 
 I seek to integrate a mail sending feature as well, with the added capability to GPG encrypt the messages.  
-Using a Natural Language analysis API that tells the user a short description of the overall mail sentiment and present entities is also in my TODO list.  
+I am going to use Skynet for sending any attachments. Thus, the user only has to send the skylink associated with the file.
+
+Also, using a Natural Language analysis API that tells the user a short description of the overall mail sentiment and present entities is also in my TODO list.  
 Moreover, I aim at polishing the user interface for a smoother experience.
+
+## Why Sia?
+
+* Easy to integrate into your application. This is an empowering feature that allows developers to easily add decentralization and transparency into their apps using
+a simple and easily manageable SDK.
+* It is very user friendly, as the skylink is the only thing needed from the user to provide in order to view their content.
 
 ## Install and use
 
