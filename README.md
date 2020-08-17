@@ -12,7 +12,7 @@ This is easily performed and the user is handed a link to use on the [skynet sit
 
 Thus, the application aims at being a temporary mail client which uses decentralized storage for sending and receiving attachments.  
 
-## Motivation
+## Motivation & Utility
 
 Considering today's information overload and lack of management, I found it extremely useful to be able to filter the noise.  
 As such, an application like Skymask allows you to handle all the information in a clean way, while also avoiding spam.  
@@ -25,6 +25,8 @@ Therefore, the main advantages of using it are:
 * Filters online noise and spam
 * Reduces information overload
 * Decentralized storage using Skynet ensures a **safe** and *transparent* management of content.
+
+Using Skynet for storage ensures a new decentralized future for mail clients, where attachments are replaced with skylinks.
 
 ## Further development
 
