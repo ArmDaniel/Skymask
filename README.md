@@ -10,6 +10,8 @@ Skymask is an application you can use to generate a temporary email address and 
 Moreover, it allows you to upload (or retrieve) any files or messages to a decentralized storage platform called Skynet ( powered by Sia ).
 This is easily performed and the user is handed a link to use on the [skynet site](https://siasky.net).
 
+Thus, the application aims at being a temporary mail client which uses decentralized storage for sending and receiving attachments.  
+
 ## Motivation
 
 Considering today's information overload and lack of management, I found it extremely useful to be able to filter the noise.  
