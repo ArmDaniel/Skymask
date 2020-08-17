@@ -27,6 +27,12 @@ I seek to integrate a mail sending feature as well, with the added capability to
 Using a Natural Language analysis API that tells the user a short description of the overall mail sentiment and present entities is also in my TODO list.  
 Moreover, I aim at polishing the user interface for a smoother experience.
 
+## Install and use
 
+The application was written in Python, so make sure to install version 3.7+
+
+1. Install syknet SDK: `pip install siaskynet`
+2. Clone the repo on your machine
+3. Run "skyUI.py" and enjoy :)
 
 #### This application is made with <3 for the 'Own the Internet' hackathon on Gitcoin! -For Sia and Namebase
