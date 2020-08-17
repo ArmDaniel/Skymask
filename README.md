@@ -1,5 +1,8 @@
 # Skymask
 
+Link to demo:
+* Youtube: [Skymask](https://youtu.be/QeifhNZ95_U)
+* Skylink: [Skymask on Skynet!](https://siasky.net/AABkmA-oiWNCpiZAcHIVPhPfYh2pJj5titWTK4BejXlwvw)
 
 ## Description
 
