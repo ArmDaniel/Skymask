@@ -3,7 +3,7 @@ from siaskynet import Skynet
 import random
 import string
 import json
-import time
+
 
 ##########################################
 #			                 #
@@ -42,11 +42,10 @@ def fetch_msg(name,domain,mid):
 def download_file(name,domain,mid,filen):
     try:
         attach = requests.get("https://www.1secmail.com/api/v1/?action=download&login="+name+"&domain="+domain+"&id="+mid+"&file="+filen)
-        times = time.strftime("%Y%m%d-%H%M%S")
-        
-        f = open(times+'.txt','x')
-        with open('C:/Programming/Skymask/'+f, 'wb') as file:
-            file.write(attach.content)
+
+        f = filen
+        with open(f, 'wb') as o_file:
+            o_file.write(attach.content)
         return "Downloaded file!"
     except:
         return "No such file or server is down :("
@@ -63,9 +62,9 @@ def upload_f(path):
 	return skylink
 
 def sky_download(filen,skylink):
-	skylink = upload_f(filen)
+	
 	try:
-		Skynet.download_file(filen,skylink)
+		Skynet.download_file(filen,upload_f.skylink)
 		print("Downloaded!")
 	except:
 		print("Skylink does not exist or could not be generated.")
