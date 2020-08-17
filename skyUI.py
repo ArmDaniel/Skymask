@@ -6,7 +6,7 @@ from prototype import *
 
 
 root = Tk()
-root.geometry("350x350")
+root.geometry("350x420")
 root.title(" Skymask Service ")
 
 title = Label(root,text = "S K Y M A S K")
@@ -37,14 +37,30 @@ alias.pack()
 def ret_in():
         ret_in.filen = filenBox.get("1.0","end-1c")
 
+nameTitle = Label(root, text="Insert name here")
+nameTitle.config(font=("Courier",8))
+nameTitle.pack()
+
 nameBox = Text(root,height=2,width=15)
 nameBox.pack()
+
+domTitle = Label(root, text="Domain name(without @)")
+domTitle.config(font=("Courier",8))
+domTitle.pack()
 
 domBox = Text(root,height=2,width=15)
 domBox.pack()
 
+msgTitle = Label(root, text="Message id(optional)")
+msgTitle.config(font=("Courier",8))
+msgTitle.pack()
+
 midBox = Text(root,height=2,width=15)
 midBox.pack()
+
+fTitle = Label(root, text="Filename for download(optional)")
+fTitle.config(font=("Courier",8))
+fTitle.pack()
 
 filenBox = Text(root,height=2,width=15)
 filenBox.pack()
@@ -92,10 +108,20 @@ def browsefunc():
     filename = filedialog.askopenfilename()
     pathlabel.config(text=filename)
     messagebox.showinfo(title="Skylink", message = "Your Skylink: " + upload_f(filename))
-     
+    f = "Skylinks.txt"
+    with open(f,"wt") as o_file:
+            o_file.write(upload_f(filename))
+            o_file.write("\n")
+            o_file.close()
 
+
+
+    
 browsebutton = Button(root, text="Upload", command=browsefunc)
 browsebutton.pack()
+
+
+        
 
 #prototype
 pathlabel = Label(root)
